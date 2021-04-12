@@ -656,6 +656,58 @@ footer .up i {
 }
 /*=================RESPONSIVENESS===========*/
 @media only screen and (max-width: 380px) {
+    header .menu {
+        padding: 0 30px;
+    }
+    header .menu .nav {
+        display:none;
+    transition: all .5s ease-in-out;
+
+    }
+    header .menu .nav.active {
+        position: absolute;
+        top: 40px;
+        left: 0;
+        width: 100vw;
+        height: 70vh;
+        background: white;
+        z-index: 30000 !important;
+        border-top: 1px solid purple;
+        padding: 20px;
+        display: block;
+        transition: 0.3s;
+
+      }
+      header .menu .nav ul {
+          flex-direction: column;
+          height: 100%;
+          width: 100%;
+    transition: all .5s ease-in-out;
+
+      }
+      header .menu .nav ul li {
+          display: inline-flex;
+          justify-content: space-between;
+          width: 100%
+      }
+      header .menu .nav ul > li:hover {
+          padding-bottom: 50px;
+      }
+      header .menu .nav ul i {
+          margin: 0 20px;
+          position: relative;
+      }
+      header .menu .nav ul > li > ul {
+          left: 30px;
+          background: transparent;
+          box-shadow: none;
+      }
+      header .menu .nav .sign {
+          display: inline-block;
+      }
+    header .menu .hamburger {
+        display: flex;
+    }
     .particles {
         left: 0;
         transform: skew(0deg);
@@ -715,6 +767,7 @@ footer .up i {
       .bene .bene-card .card, .dev .dev-det, .dev textarea {
           flex-basis: 100%;
       }
+      
       .bene-sec, .dev-sec .dev, .owl-sec  {
           padding: 50px 10px;
       }
@@ -726,7 +779,7 @@ footer .up i {
           top: 60%
       }
       .cred .cred-ima {
-          transform: scale(0.9);
+          transform: scale(0.6);
       }
       .cred .cred-det {
           z-index: 5;
@@ -739,9 +792,12 @@ footer .up i {
           z-index: 1;
           top: 70%
       }
-      
+      .bene .bene-card .card {
+        flex-basis: 40%;
+        width: 220px;
+      }
       .owl-sec .owl h2, .owl-sec .owl h3 {
-          transform: scale(0.9);
+          max-width: 200px;
       }
       .owl .card {
           padding: 20px 20px;
@@ -889,6 +945,7 @@ footer .up i {
       }
       .bene .bene-card .card {
         flex-basis: 40%;
+        width: 220px;
       }
       .dev .dev-det, .dev textarea {
           flex-basis: 100%;
